@@ -2,15 +2,15 @@ package trabalho;
 
 
 public abstract class Produto {
-    String codigo;
-    String descricao;
-    float valor;
+    protected String codigo;
+    protected String descricao;
+    protected float valor;
     
     Produto(String codigo, String descricao, float valor){
         this.codigo = codigo;
         this.descricao = descricao;
         this.valor = valor;
-    }
+    } 
     
     String GetCodigo(){
         return codigo;
