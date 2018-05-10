@@ -7,9 +7,14 @@ public class ProdutoNacional extends Produto {
     private float taxaImposto;
     static private int cont;
     
+    ProdutoNacional(){
+        this.cont = 0;
+    }
+    
     ProdutoNacional(String codigo, String descricao, float valor, float taxaImposto){
         super(codigo,descricao,valor);
         this.taxaImposto = taxaImposto;
+        cont = 0;
     }
    
     float GetTaxaImposto(){
@@ -29,7 +34,7 @@ public class ProdutoNacional extends Produto {
       return (valor + taxaImposto);  
     }
     
-    void CadastrarProduto(ProdutoNacional produtos[]){
+    static void CadastrarProduto(ProdutoNacional produtos[]){
         String aux;
         float aux2;
         Scanner scan = new Scanner(System.in);

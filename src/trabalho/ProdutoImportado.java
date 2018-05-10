@@ -8,10 +8,15 @@ public class ProdutoImportado extends Produto {
     private float taxaImportacao;
     static private int cont;
     
+    ProdutoImportado(){
+        this.cont = 0;
+    }
+    
     ProdutoImportado(String codigo, String descricao, float valor, float taxaImposto, float taxaImportacao){
         super(codigo,descricao,valor);
         this.taxaImposto = taxaImposto;
         this.taxaImportacao = taxaImportacao;
+        cont = 0;
     }
     
     float GetTaxaImposto(){
@@ -34,11 +39,12 @@ public class ProdutoImportado extends Produto {
         return cont;
     }
     
+    @Override
     float CalcularPreco(){
         return (valor + taxaImposto + taxaImportacao);
     }
     
-    void CadastrarProduto(ProdutoImportado produtos[]){
+    static void CadastrarProduto(ProdutoImportado produtos[]){
         String aux;
         float aux2;
         Scanner scan = new Scanner(System.in);
@@ -54,7 +60,10 @@ public class ProdutoImportado extends Produto {
         System.out.println("Insira a taxa de imposto:");
         aux2 = scan.nextFloat();
         produtos[cont].SetTaxaImposto(aux2);
-        System.out.println("Insira ");
+        System.out.println("Insira a taxa de importação:");
+        aux2 = scan.nextFloat();
+        produtos[cont].SetTaxaImportacao(aux2);
+        cont ++;
     }
     
 }

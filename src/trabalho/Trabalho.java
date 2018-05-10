@@ -25,13 +25,13 @@ public class Trabalho {
     }
         
     public static void main(String[] args) {
-        int op = 0, op2 = 0, op3 = 0, sair = 0, cli;
+        int op = 0, op2 = 0, op3 = 0, sair = 0, cli, pro;
         String continua = "S";
         Scanner scan = new Scanner(System.in);
         Cliente clientes[] = new Cliente[15];
         ProdutoNacional produtosnacionais[] = new ProdutoNacional[25];
         ProdutoImportado produtosimportados[] = new ProdutoImportado[25];
-        while(continua == "S" || continua == "s"){
+        while(continua.equals("S") || continua.equals("s")){
             PrimeiroMenu(op);
             switch(op){
                 case 1:
@@ -48,10 +48,17 @@ public class Trabalho {
                             op3 = scan.nextInt();
                             switch(op3){
                                 case 1:
+                                    pro = ProdutoNacional.GetCont();
+                                    produtosnacionais[pro] = new ProdutoNacional();
+                                    ProdutoNacional.CadastrarProduto(produtosnacionais);
                                     break;
                                 case 2:
+                                    pro = ProdutoImportado.GetCont();
+                                    produtosimportados[pro] = new ProdutoImportado();
+                                    ProdutoImportado.CadastrarProduto(produtosimportados);
                                     break;
                                 default:
+                                    System.out.println("Erro na seleção de opção!!");
                                     break;
                             }
                             break;

@@ -6,6 +6,9 @@ public abstract class Produto {
     protected String descricao;
     protected float valor;
     
+    Produto(){
+    }
+    
     Produto(String codigo, String descricao, float valor){
         this.codigo = codigo;
         this.descricao = descricao;
