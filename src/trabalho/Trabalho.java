@@ -25,7 +25,7 @@ public class Trabalho {
     }
         
     public static void main(String[] args) {
-        int op = 0, op2 = 0, op3 = 0, sair = 0, cli, pro;
+        int op = 0, op2 = 0, op3 = 0, sair = 0, cli, pro,pro2;
         String continua = "S";
         Scanner scan = new Scanner(System.in);
         Cliente clientes[] = new Cliente[15];
@@ -53,8 +53,8 @@ public class Trabalho {
                                     ProdutoNacional.CadastrarProduto(produtosnacionais);
                                     break;
                                 case 2:
-                                    pro = ProdutoImportado.GetCont();
-                                    produtosimportados[pro] = new ProdutoImportado();
+                                    pro2 = ProdutoImportado.GetCont();
+                                    produtosimportados[pro2] = new ProdutoImportado();
                                     ProdutoImportado.CadastrarProduto(produtosimportados);
                                     break;
                                 default:
