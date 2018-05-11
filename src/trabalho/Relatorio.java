@@ -16,7 +16,7 @@ public class Relatorio {
         int i;
         int cli = Cliente.GetCont();
         for(i = 0; i < cli; i ++){
-            if(clientes[i].GetCPF() == cpf){
+            if(clientes[i].GetCPF().equals(cpf)){
                 clientes[i].Relatorio();
                 return 1;
             }
@@ -37,7 +37,7 @@ public class Relatorio {
         int i;
         int pro = ProdutoNacional.GetCont();
         for(i = 0; i < pro; i ++){
-            if(produtos[i].GetCodigo() == codigo){
+            if(produtos[i].GetCodigo().equals(codigo)){
                 produtos[i].Relatorio();
                 return 1;
             }
@@ -58,9 +58,11 @@ public class Relatorio {
         int i;
         int pro = ProdutoImportado.GetCont();
         for(i = 0; i < pro; i ++){
-            if(produtos[i].GetCodigo() == codigo){
-                
+            if(produtos[i].GetCodigo().equals(codigo)){
+                produtos[i].Relatorio();
+                return 1;
             }
         }
+        return 0;
     }
 }

@@ -5,23 +5,23 @@ import java.util.Scanner;
 
 public class Trabalho {
 
-    static void PrimeiroMenu(int opcao){
+    static int PrimeiroMenu(){
         System.out.println("1 - Cadastrar");
         System.out.println("2 - Registrar Compra");
         System.out.println("3 - Relatórios");
-        System.out.println("4 - Salvar Dados");
-        System.out.println("5 - Carregar Dados");
-        System.out.println("6 - Sair");
+        System.out.println("4 - Sair");
         Scanner scan = new Scanner(System.in);
-        opcao = scan.nextInt();
+        int opcao = scan.nextInt();
+        return opcao;
     }
    
-    static void SegundoMenu(int opcao){
+    static int SegundoMenu(){
         System.out.println("1 - Cadastrar Cliente");
         System.out.println("2 - Cadastrar Produto");
         System.out.println("3 - Sair");
         Scanner scan = new Scanner(System.in);
-        opcao = scan.nextInt();
+        int opcao = scan.nextInt();
+        return opcao;
     }
         
     public static void main(String[] args) {
@@ -32,10 +32,11 @@ public class Trabalho {
         ProdutoNacional produtosnacionais[] = new ProdutoNacional[25];
         ProdutoImportado produtosimportados[] = new ProdutoImportado[25];
         while(continua.equals("S") || continua.equals("s")){
-            PrimeiroMenu(op);
+            op = PrimeiroMenu();
+            System.out.println("Teste: " + op);
             switch(op){
                 case 1:
-                    SegundoMenu(op2);
+                    op2 = SegundoMenu();
                     switch(op2){
                         case 1:
                             cli = Cliente.GetCont();
@@ -75,10 +76,6 @@ public class Trabalho {
                 case 3:
                     break;
                 case 4:
-                    break;
-                case 5:
-                    break;
-                case 6:
                     sair = 1;
                     break;
                 default:
