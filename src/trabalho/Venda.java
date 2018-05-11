@@ -1,6 +1,7 @@
 package trabalho;
 
 import java.util.Calendar;
+import java.util.Scanner;
 
 
 public class Venda {
@@ -66,5 +67,15 @@ public class Venda {
             soma += itens[i].CalcularTotal();
         }
         return soma;
+    }
+    
+    void RegistrarCompra(){
+        System.out.println("Informações da compra:");
+        Scanner entrada = new Scanner(System.in);
+        String continua = entrada.nextLine();
+        while(continua.equals("S") || continua.equals("s")){
+            System.out.println("Digite o código do produto:");
+            String codProduto = entrada.nextLine();
+        }       
     }
 }
