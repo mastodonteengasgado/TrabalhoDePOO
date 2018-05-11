@@ -49,4 +49,8 @@ public class Cliente {
         cont ++;
     }
    
+    void Relatorio(){
+        System.out.println("CPF: " + cpf);
+        System.out.println("Nome: " + nome);
+    } 
 }

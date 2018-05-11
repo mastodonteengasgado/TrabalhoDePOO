@@ -52,4 +52,11 @@ public class ProdutoNacional extends Produto {
         produtos[cont].SetTaxaImposto(aux2);
         cont ++;
     }
+    
+    void Relatorio(){
+        System.out.println("Codigo do produto: " + codigo);
+        System.out.println("Descrição do produto: " + descricao);
+        System.out.println("Valor do produto: " + valor);
+        System.out.println("Taxa de imposto: " + taxaImposto);
+    } 
 }

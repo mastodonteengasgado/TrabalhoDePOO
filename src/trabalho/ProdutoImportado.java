@@ -66,4 +66,12 @@ public class ProdutoImportado extends Produto {
         cont ++;
     }
     
+    void Relatorio(){
+        System.out.println("Codigo do produto: " + codigo);
+        System.out.println("Descrição do produto: " + descricao);
+        System.out.println("Valor do produto: " + valor);
+        System.out.println("Taxa de imposto: " + taxaImposto);
+        System.out.println("Taxa de Importação: " + taxaImportacao);
+    } 
+    
 }

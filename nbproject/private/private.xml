@@ -1,9 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Produto.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Cliente.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Cartao.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/ProdutoNacional.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Relatorio.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Trabalho.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/ProdutoImportado.java</file>
             <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Venda.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Cheque.java</file>
+            <file>file:/C:/Users/MastodonteEngasgado/Documents/NetBeansProjects/Trabalho/TrabalhoDePOO/src/trabalho/Item.java</file>
         </group>
     </open-files>
 </project-private>
