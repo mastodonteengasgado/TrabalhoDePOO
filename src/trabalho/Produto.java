@@ -1,10 +1,13 @@
 package trabalho;
 
+import javax.swing.JOptionPane;
+
 
 public abstract class Produto {
     protected String codigo;
     protected String descricao;
     protected float valor;
+    protected static int cont;
     
     Produto(){
     }
@@ -38,6 +41,22 @@ public abstract class Produto {
     void SetValor(float valor){
         this.valor = valor;
     }
+
+    public int getCont() {
+        return cont;
+    }
+
+    public void setCont(int cont) {
+        this.cont = cont;
+    }
     
     abstract float CalcularPreco();
+    
+    public static int BuscaProduto(Produto produtos[], String codigo){
+        for(int i = 0; i < cont; i++){
+            if((produtos[i].GetCodigo()).equals(codigo)) return i;
+        }
+        JOptionPane.showMessageDialog(null, "Item inválido!");
+        return -1;
+    }
 }

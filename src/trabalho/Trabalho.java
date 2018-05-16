@@ -1,10 +1,11 @@
 package trabalho;
 
 import java.util.Scanner;
+import javax.swing.JOptionPane;
 
 
 public class Trabalho {
-
+      
     static int PrimeiroMenu(){
         System.out.println("1 - Cadastrar");
         System.out.println("2 - Registrar Compra");
@@ -25,15 +26,17 @@ public class Trabalho {
     }
         
     public static void main(String[] args) {
-        int op = 0, op2 = 0, op3 = 0, sair = 0, cli, pro,pro2;
-        String continua = "S";
+        int op = 0, op2 = 0, op3 = 0, sair = 0, cli, pro,pro2, nro_item, cont, qtd, resp;
+        String continua = "S", aux;
         Scanner scan = new Scanner(System.in);
         Cliente clientes[] = new Cliente[15];
+        Venda venda = new Venda();
+        Produto produtos[] = new Produto[25];
         ProdutoNacional produtosnacionais[] = new ProdutoNacional[25];
         ProdutoImportado produtosimportados[] = new ProdutoImportado[25];
         while(continua.equals("S") || continua.equals("s")){
             op = PrimeiroMenu();
-            System.out.println("Teste: " + op);
+            //System.out.println("Teste: " + op);
             switch(op){
                 case 1:
                     op2 = SegundoMenu();
@@ -72,6 +75,35 @@ public class Trabalho {
                     }
                     break;
                 case 2:
+                    System.out.println("klfdsajkl");
+                    Item itens[] = new Item[25];
+                    System.out.println("fdas");
+                    do{
+                        System.out.println("Entrou no 'do'");
+                        aux = JOptionPane.showInputDialog("Digite o código do produto:");
+                        nro_item = Produto.BuscaProduto(produtos, aux);
+                        cont = venda.GetCont();
+                        
+                        if(nro_item != -1){
+                            itens[cont].SetNum(cont);
+                            itens[cont].SetCodigoProduto(produtos[nro_item].GetCodigo());
+                            itens[cont].SetDescricao(produtos[nro_item].GetDescricao());
+                            itens[cont].SetValor(produtos[nro_item].GetValor());
+                            qtd = Integer.valueOf(JOptionPane.showInputDialog("Digite a quantidade:"));
+                            itens[cont].SetQuantidade(qtd);
+                            itens[cont].setValorTotal(produtos[nro_item].GetValor() * qtd);
+                            venda.AddItem(itens[cont]);
+                        }
+                        else
+                        {
+                            JOptionPane.showMessageDialog(null, "Item inválido!");
+                        }
+                        
+                        resp = JOptionPane.showConfirmDialog(null, "Cadastrar outro produto?");
+                    } while(resp == JOptionPane.OK_OPTION && cont <= 25);
+                    if(cont > 25) System.out.println("Limite máximos de produtos atingido.");
+ 
+                    //venda.RegistrarCompra();
                     break;
                 case 3:
                     break;

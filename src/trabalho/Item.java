@@ -2,16 +2,16 @@ package trabalho;
 
 
 public class Item {
-    int num;
-    String codigoProduto;
-    String descricao;
-    float valor;
-    float quantidade;
+    private int num;
+    private String codigoProduto;
+    private String descricao;
+    private float valor;
+    private int quantidade;
     
     Item(){
     }
     
-    Item(int num, String codigoProduto, String descricao, float valor, float quantidade){
+    Item(int num, String codigoProduto, String descricao, float valor, int quantidade){
         this.num = num;
         this.codigoProduto = codigoProduto;
         this.descricao = descricao;
@@ -55,12 +55,19 @@ public class Item {
         return quantidade;
     }
     
-    void SetQuantidade(float quantiade){
+    void SetQuantidade(int quantiade){
         this.quantidade = quantidade;
     }
     
     float CalcularTotal(){
         return (quantidade * valor);
     }
-    
+
+    public float getValorTotal() {
+        return valorTotal;
+    }
+
+    public void setValorTotal(float valorTotal) {
+        this.valorTotal = valorTotal;
+    }
 }
